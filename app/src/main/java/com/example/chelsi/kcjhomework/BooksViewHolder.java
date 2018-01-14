@@ -24,6 +24,8 @@ public class BooksViewHolder extends RecyclerView.ViewHolder {
     }
 
     public void bind(Books books){
-        book.setImageResource(Books.getCover());
+        book.setImageResource(books.getCover());
+        title.setText(books.getTitle());
+        author.setText(books.getAuthor());
     }
 }
