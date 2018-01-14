@@ -8,9 +8,9 @@ import java.util.ArrayList;
 
 public class BooksResponse {
 
-    private ArrayList<Books> books;
+    private ArrayList<Books> results;
 
     public ArrayList<Books> getBooks(){
-        return books;
+        return results;
     }
 }
