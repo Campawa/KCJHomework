@@ -26,9 +26,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recycler);
         layoutManager = new LinearLayoutManager(getApplicationContext());
 
-        Retrofit retrofit = new Retrofit.Builder().baseUrl(BASE_URL)
-                .addConverterFactory(GsonConverterFactory
-                        .create()
-                        .build());
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create()).build();
+
     }
 }
