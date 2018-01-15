@@ -10,7 +10,13 @@ import retrofit2.http.Query;
  */
 
 public interface BooksService {
-    @GET("book/v1/")
-    Call<BooksResponse> getBooks(@Path("apiKey")String key,@Query("q")String name,@Query("parameter")String title);
+//<<<<<<< HEAD
+//    @GET("book/v1/")
+//    Call<BooksResponse> getBooks(@Path("apiKey")String key,@Query("q")String name,@Query("parameter")String title);
+//=======
+    @GET("lists/best-sellers/history.json")
+    Call<BooksResponse> getBooks(@Query("api-key") String apiKey);
+
+//>>>>>>> 5c487f3d49e02c187315b67bede0e778a86923dc
 
 }
