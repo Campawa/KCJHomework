@@ -1,5 +1,7 @@
 package com.example.chelsi.kcjhomework;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.ArrayList;
 
 /**
@@ -8,9 +10,10 @@ import java.util.ArrayList;
 
 public class BooksResponse {
 
-    private ArrayList<Books> results;
+    @SerializedName("results")
+    private ArrayList<Books> books;
 
     public ArrayList<Books> getBooks(){
-        return results;
+        return books;
     }
 }
