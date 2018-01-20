@@ -8,12 +8,16 @@ import java.util.ArrayList;
  * Created by Chelsi on 1/14/2018.
  */
 
-public class BooksResponse {
+public class
+BooksResponse {
 
-    @SerializedName("results")
-    private ArrayList<Books> books;
+    //@SerializedName("results")
+    private ArrayList<Books> results;
 
-    public ArrayList<Books> getBooks(){
-        return books;
+
+    public ArrayList<Books> getResults(){
+        return results;
     }
+
 }
+

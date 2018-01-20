@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 
 import java.util.ArrayList;
 
@@ -41,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<BooksResponse> call, Response<BooksResponse> response) {
                 Log.d("response", "onResponse: working"+ response.toString());
 
-                booksArrayList = response.body().getBooks();
+                booksArrayList = response.body().getResults();
                 booksAdapter = new BooksAdapter(booksArrayList);
                 recyclerView.setAdapter(booksAdapter);
                 recyclerView.setLayoutManager(layoutManager);
@@ -52,5 +54,10 @@ public class MainActivity extends AppCompatActivity {
                 t.printStackTrace();
             }
         });
+    }
+    public boolean onCreateOptionsMenu (Menu menu){
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.search_menu, menu);
+        return true;
     }
 }
