@@ -14,6 +14,8 @@ public class BooksViewHolder extends RecyclerView.ViewHolder {
     ImageView book;
     TextView title;
     TextView author;
+    TextView ranks;
+    TextView description;
 
     public BooksViewHolder(View itemView) {
         super(itemView);
@@ -21,11 +23,17 @@ public class BooksViewHolder extends RecyclerView.ViewHolder {
         book = itemView.findViewById(R.id.bookCover);
         title = itemView.findViewById(R.id.bookTitle);
         author = itemView.findViewById(R.id.bookAuthor);
+        ranks = itemView.findViewById(R.id.rank);
+        description = itemView.findViewById(R.id.bookDescription);
     }
 
     public void bind(Books books){
+        Books.Ranks ranks = new Books.Ranks();
+
         book.setImageResource(books.getCover());
         title.setText(books.getTitle());
         author.setText(books.getAuthor());
+        description.setText(books.getDescription());
+//        ranks.setText(ranks.getRank());
     }
 }
