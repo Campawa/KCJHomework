@@ -14,6 +14,7 @@ public class BooksViewHolder extends RecyclerView.ViewHolder {
     ImageView book;
     TextView title;
     TextView author;
+    TextView bookInfo;
 
     public BooksViewHolder(View itemView) {
         super(itemView);
@@ -21,11 +22,13 @@ public class BooksViewHolder extends RecyclerView.ViewHolder {
         book = itemView.findViewById(R.id.bookCover);
         title = itemView.findViewById(R.id.bookTitle);
         author = itemView.findViewById(R.id.bookAuthor);
+        bookInfo = itemView.findViewById(R.id.bookinfo);
     }
 
     public void bind(Books books){
         book.setImageResource(books.getCover());
         title.setText(books.getTitle());
         author.setText(books.getAuthor());
+        bookInfo.setText(books.getBookinfo());
     }
 }

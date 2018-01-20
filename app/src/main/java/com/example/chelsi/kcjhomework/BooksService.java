@@ -10,7 +10,7 @@ import retrofit2.http.Query;
  */
 
 public interface BooksService {
-    @GET("book/v1/")
-    Call<BooksResponse> getBooks(@Path("apiKey")String key,@Query("q")String name,@Query("parameter")String title);
+    @GET("svc/books/v3/lists.json?list-name=hardcover-fiction&api-key=")
+    Call<BooksResponse> getBooks(@Path("apiKey")String key);
 
 }

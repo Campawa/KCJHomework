@@ -12,7 +12,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static String BASE_URL;
+    public static String BASE_URL = "https://api.nytimes.com/";
     private ArrayList<Books> booksArrayList;
     RecyclerView.LayoutManager layoutManager;
     RecyclerView recyclerView;

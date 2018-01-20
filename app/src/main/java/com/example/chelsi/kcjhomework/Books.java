@@ -8,6 +8,11 @@ public class Books {
     private int cover;
     private String title;
     private String author;
+    private String bookinfo;
+
+    public String getBookinfo() {
+        return bookinfo;
+    }
 
     public int getCover() {
         return cover;
