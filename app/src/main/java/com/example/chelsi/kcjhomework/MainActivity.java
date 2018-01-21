@@ -11,7 +11,9 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -35,6 +37,24 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.option_menu, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch(item.getItemId()){
+            case R.id.options_item:
+                Toast.makeText(this, "options selected", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.search_item:
+                Toast.makeText(this, "Search item selected..", Toast.LENGTH_SHORT).show();
+            break;
+            case R.id.help_item:
+                Toast.makeText(this, "I can only do so much...", Toast.LENGTH_SHORT).show();
+            break;
+            case R.id.FAQ:
+                Toast.makeText(this, "Frequently Asked Questions", Toast.LENGTH_SHORT).show();
+                break;
+        }
         return true;
     }
 
