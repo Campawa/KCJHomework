@@ -1,5 +1,6 @@
 package com.example.chelsi.kcjhomework;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -11,7 +12,9 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -36,6 +39,26 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.option_menu, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch(item.getItemId()){
+            case R.id.options_item:
+                Toast.makeText(this, "options selected", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.search_item:
+                Toast.makeText(this, "Search item selected..", Toast.LENGTH_SHORT).show();
+            break;
+            case R.id.help_item:
+                Toast.makeText(this, "I can only do so much...", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(this, BookCovers.class);
+                startActivity(intent);
+            break;
+            case R.id.FAQ:
+                Toast.makeText(this, "Frequently Asked Questions", Toast.LENGTH_SHORT).show();
+                break;
+        }
         return true;
     }
 
@@ -64,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<BooksResponse> call, Response<BooksResponse> response) {
                 Log.d("response", "onResponse: working"+ response.toString());
 
-                booksArrayList = response.body().getBooks();
+                booksArrayList = response.body().getResults();
                 booksAdapter = new BooksAdapter(booksArrayList);
                 recyclerView.setAdapter(booksAdapter);
                 recyclerView.setLayoutManager(layoutManager);
@@ -75,6 +98,5 @@ public class MainActivity extends AppCompatActivity {
                 t.printStackTrace();
             }
         });
-
     }
 }

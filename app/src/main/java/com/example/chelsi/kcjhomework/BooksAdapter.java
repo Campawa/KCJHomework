@@ -15,7 +15,9 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksViewHolder> {
 
     private List<Books> list;
 
-    public BooksAdapter (List<Books> book) {list = book;}
+    public BooksAdapter (List<Books> book) {
+        list = book;
+    }
 
     @Override
     public BooksViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
