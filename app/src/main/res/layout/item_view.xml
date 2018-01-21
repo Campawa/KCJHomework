@@ -3,14 +3,20 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_marginBottom="10dp">
 
     <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
+        android:layout_width="375dp"
         android:layout_height="0dp"
+        android:layout_gravity="center"
         android:layout_margin="@dimen/cardview_default_elevation"
-        android:elevation="5dp"
-        android:layout_weight="1">
+        android:elevation="15dp"
+        android:layout_weight="1"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="15dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -28,34 +34,46 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rank"
+                    android:text="rank"
+                    android:layout_marginLeft="10dp"/>
+                <TextView
                     android:paddingTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/bookTitle"
                     android:text="title"
-                    android:textSize="20dp"
-                    android:textStyle="bold"/>
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="30dp"
+                    />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/bookAuthor"
                     android:textSize="15dp"
-                    android:text="author"/>
+                    android:text="author"
+                    android:layout_marginLeft="10dp"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/bookDescription"
-                    android:textSize="15dp"
+                    android:textSize="18dp"
                     android:textStyle="italic"
-                    android:text="description"/>
+                    android:text="description"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/rank"
-                    android:text="rank"/>
+
 
             </LinearLayout>
 
