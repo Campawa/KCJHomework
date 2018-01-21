@@ -2,6 +2,7 @@ package com.example.chelsi.kcjhomework;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 /**
@@ -9,9 +10,8 @@ import retrofit2.http.Query;
  */
 
 public interface BooksService {
+
     @GET("lists/best-sellers/history.json")
     Call<BooksResponse> getBooks(@Query("api-key") String apiKey);
 
-    @GET("lists/best-sellers/history.json")
-    Call<RanksReponse> getRanks(@Query("api-key") String apiKey);
 }

@@ -10,6 +10,12 @@ public class Books {
     private int cover;
     private String title;
     private String author;
+    private String description;
+
+    public String getDescription() {
+        return description;
+    }
+
     private ArrayList<Ranks> ranks_history;
 
 
@@ -28,4 +34,18 @@ public class Books {
     public ArrayList<Ranks> getRanks_history() {
         return ranks_history;
     }
+
+    public static class Ranks {
+        private int rank;
+        private int weeks_on_list;
+
+        public int getRank() {
+            return rank;
+        }
+
+        public int getWeeks_on_list() {
+            return weeks_on_list;
+        }
+    }
+
 }
