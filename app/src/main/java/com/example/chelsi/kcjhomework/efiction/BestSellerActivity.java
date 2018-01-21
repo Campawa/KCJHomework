@@ -1,10 +1,11 @@
 package com.example.chelsi.kcjhomework.efiction;
 
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.HorizontalScrollView;
-import android.widget.ImageView;
+import android.widget.FrameLayout;
 
 import com.example.chelsi.kcjhomework.*;
 import com.example.chelsi.kcjhomework.efictionbooks.BooksEFiction;
@@ -27,6 +28,7 @@ public class BestSellerActivity extends AppCompatActivity {
     private String author;
     private String image;
     List<String> firstImages = new ArrayList<>();
+    private FrameLayout fictionFragmentContainer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,12 +67,6 @@ public class BestSellerActivity extends AppCompatActivity {
             }
         });
 
-//        initData();
     }
-//    private void initData(){
-////        firstImages.add(R.drawable.ic_launcher_background);
-////        firstImages.add(R.drawable.ic_launcher_foreground);
-////        firstImages.add(R.drawable.ic_launcher_foreground);
-//
-//    }
+
 }

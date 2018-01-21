@@ -1,12 +1,16 @@
 package com.example.chelsi.kcjhomework;
 
 import android.content.Context;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.example.chelsi.kcjhomework.efiction.BestSellerFictionFragment;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -48,6 +52,21 @@ public class MyAdapter extends PagerAdapter {
         Picasso.with(context).load(firstImages.get(position)).into(imageView);
         //imageView.setImageResource(firstImages.get(position));
         container.addView(view);
+
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                BestSellerFictionFragment bestSellerFictionFragment = new BestSellerFictionFragment();
+                FragmentManager fragmentManager = ((FragmentActivity) context).getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.bestSellerFragment, bestSellerFictionFragment);
+                fragmentTransaction.commit();
+
+            }
+        });
+
+
         return view;
     }
 }

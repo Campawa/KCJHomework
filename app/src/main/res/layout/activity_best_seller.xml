@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -10,14 +11,23 @@
     <com.gigamole.infinitecycleviewpager.HorizontalInfiniteCycleViewPager
         android:id="@+id/horizontal_cycle"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         app:icvp_interpolator="@android:anim/accelerate_decelerate_interpolator"
         app:icvp_scroll_duration="250"
         app:icvp_center_page_scale_offset="30dp"
         app:icvp_min_page_scale_offset="5dp"
         app:icvp_medium_scaled="false"
+        android:layout_weight="1"
         >
 
     </com.gigamole.infinitecycleviewpager.HorizontalInfiniteCycleViewPager>
 
-</RelativeLayout>
+    <FrameLayout
+        android:id="@+id/bestSellerFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+    </FrameLayout>
+
+</LinearLayout>
