@@ -17,6 +17,7 @@ public class BooksViewHolder extends RecyclerView.ViewHolder {
     TextView ranks;
     TextView description;
 
+
     public BooksViewHolder(View itemView) {
         super(itemView);
 
@@ -25,6 +26,7 @@ public class BooksViewHolder extends RecyclerView.ViewHolder {
         author = itemView.findViewById(R.id.bookAuthor);
         ranks = itemView.findViewById(R.id.rank);
         description = itemView.findViewById(R.id.bookDescription);
+
     }
 
     public void bind(Books books){

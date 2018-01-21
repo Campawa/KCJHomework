@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static String BASE_URL = "https://api.nytimes.com/svc/books/v3/";
 
+
     private ArrayList<Books> booksArrayList;
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;

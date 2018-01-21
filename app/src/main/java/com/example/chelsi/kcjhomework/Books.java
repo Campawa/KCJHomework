@@ -18,7 +18,6 @@ public class Books {
 
     private ArrayList<Ranks> ranks_history;
 
-
     public int getCover() {
         return cover;
     }
