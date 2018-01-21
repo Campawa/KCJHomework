@@ -52,11 +52,6 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.replace(R.id.fragment_container, nytFragment);
         fragmentTransaction.commit();
 
-
-//<<<<<<< HEAD
-//        Retrofit retrofit = new Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create()).build();
-//
-//=======
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -79,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 t.printStackTrace();
             }
         });
-//>>>>>>> 5c487f3d49e02c187315b67bede0e778a86923dc
+
+
     }
 }
